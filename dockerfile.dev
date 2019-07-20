@@ -1,0 +1,8 @@
+FROM node:alpine
+
+WORKDIR '/D:/AWSDEVOPS/Devops/Docker/dockertest1/visits/frontend'
+COPY package.json .
+RUN npm install
+COPY . .
+
+CMD ["npm", "start"]
